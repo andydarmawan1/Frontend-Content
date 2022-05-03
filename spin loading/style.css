@@ -21,8 +21,7 @@ body
     justify-content: center;
     align-items: center;
 }
-.container
-.ring
+.container .ring
 {
     position: relative;
     width: 150px;
