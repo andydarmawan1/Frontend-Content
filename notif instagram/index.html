@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Notification UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper" onclick="active(event)">
+        <i class="fas fa-home"></i>
+        <i class="fas fa-search"></i>
+        <i class="fas fa-plus-circle"></i>
+        <i class="fas fa-heart select"></i>
+        <div class="notif notify">
+            <span>12 <i class="fas fa-user"></i></span>
+            <span>3 <i class="fas fa-comment"></i></span>
+            <span>12 <i class="fas fa-heart"></i></span>
+        </div>
+        <i class="fas fa-user"></i>
+    </div>
+
+    <script>
+        function active(e) {
+            let selected = document.querySelector('.wrapper i.active');
+            if(selected !== null){
+                selected.classList.remove('active');
+            }
+            e.target.classList.add('active');
+        }
+
+        const select = document.querySelector('.select');
+        const notify = document.querySelector('.notif');
+        
+        select.addEventListener('click',()=>{
+            notify.classList.toggle('notify')
+        });
+    </script>
+</body>
+</html>
